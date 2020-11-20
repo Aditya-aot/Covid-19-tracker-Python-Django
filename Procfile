@@ -1,1 +1,1 @@
-web: gunicorn chat_app.wsgi 
+web: gunicorn covid_19_site.wsgi 
