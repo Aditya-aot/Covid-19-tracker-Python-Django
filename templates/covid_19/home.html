@@ -1,0 +1,62 @@
+{% extends 'covid_19/base.html'%}
+{% block content %}
+
+
+
+<html lang="en">
+<head>
+      
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<br>
+        <form action=" " method="post">{% csrf_token %}
+           <div class="form-control" {{form}} </div>
+        <p> <button class="button"><span>Submit </span></button> </p>
+        
+        </form>
+       
+       <br>
+
+       <div class="update">
+       last update of data of covid_19 <br> days ➟ {{days }} 
+       time ➟ {{time }} 
+       </div>
+
+
+<hr>
+        <div class="basic">
+       <div class="item1">   Continent  ➟ {{continent }}  </div>
+       <div class="item1">    Country    ➟ {{ country}}  </div>  
+       <div class="item1">     Population ➟ {{population}}  </div>  
+       </div>    
+<hr>
+       <div class="info_covid">
+      <div>
+       new_cases       ➟ {{new_cases }} <br>
+       active_cases    ➟ {{active_cases }} <br>
+       critical_cases  ➟ {{critical_cases }} <br>
+       recovered_cases ➟ {{recovered_cases }} <br>
+       case_1M_pop     ➟ {{case_1M_pop }} <br>
+       total_cases     ➟ {{total_cases}} <br> </div>  
+<hr>
+      <div>
+       new_deaths    ➟ {{new_deaths }} <br>
+       deaths_1M_pop ➟ {{deaths_1M_pop }} <br>
+       total_deaths  ➟ {{total_deaths }} <br> </div> 
+<hr>
+       <div>
+       test_1M_pop ➟ {{test_1M_pop }} <br>
+       total       ➟ {{total }}  <br> </div> 
+<hr>
+    
+
+
+
+</body>
+</html>
+
+{% endblock content %}

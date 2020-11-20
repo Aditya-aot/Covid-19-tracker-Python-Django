@@ -1,0 +1,150 @@
+.basic {
+    border: 5px solid #ffcc5c ;
+    display: flex ; 
+    flex-direction: row ;
+    justify-content: space-around ;
+    flex-wrap: wrap ;
+}
+
+.info_covid {
+    /* border: 5px solid  #ffcc5c ; */
+    display: flex ; 
+    flex-direction: row ;
+    justify-content: space-around ;
+    flex-wrap: wrap ;
+    background-color: #ebebeb;
+}
+
+
+.update {
+    border: 5px solid  #ffcc5c ;
+    display: flex ; 
+    flex-direction: row ;
+    justify-content: space-around ;
+    flex-wrap: wrap ;
+}
+
+
+.basic div {
+    margin: 10px ;
+    text-align: center ;
+    font-size : 1.6em ;
+    /* color : white ; */
+}
+
+.item1:hover {
+    color: blue ;
+    }
+
+/* .button:hover {
+    color: blue ;
+    } */
+
+    /* .button {
+        border-radius: 4px;
+        background-color: #f10b0b;
+        border: none;
+        color: #000000;
+        text-align: center;
+        font-size: 15px;
+        padding: 10px;
+        width: 100px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+      
+      .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      
+      .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      
+      .button:hover span {
+        padding-right: 25px;
+      }
+      
+      .button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }     */
+
+
+     body {
+        /* background: #2f2f31; */
+         /* -webkit-transform: rotateX(0.003deg);  */
+                /* transform: rotateX(0.003deg); */
+        /* height: 100vh; */
+        /* color: #fff;  */
+      }
+      .button {
+         /* position: absolute;  */
+        /* left: 50%; */
+        /* top: 50%;  */
+        -webkit-transform: translate(-5%, -20%);
+                /* transform: translate(-50%, -50%); */
+        color: #000000;
+        /* text-decoration: none;  */
+        /* font-size: 2em; */
+        background: #fbff00;
+        display: inline-block;
+         font-family: Montserrat;
+        text-transform: uppercase;
+         /* padding: 0.5em 2em;  */
+        border: 2px solid #000000;
+        /* -webkit-transition: 0.02s 0.2s cubic-bezier(0.1, 0, 0.1, 1); */ */
+         /* transition: 0.02s 0.2s cubic-bezier(0.1, 0, 0.1, 1); */ */
+      }
+      .button::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        background: #fafafa;
+        -webkit-transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+        transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+        z-index: -1;
+      }
+      .button::after {
+        content: "";
+        display: inline-block;
+        background-image: url("https://image.flaticon.com/icons/png/128/109/109617.png");
+        position: absolute;
+        top: 0;
+        left: calc(100% - 3em);
+        right: 3em;
+        bottom: 0;
+        background-size: 1.5em;
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-transition: right 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+        transition: right 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+      }
+      .button:hover {
+        padding: 0.5em 3.5em 0.5em 0.5em;
+      }
+      .button:hover::before {
+        left: calc(100% - 3em);
+        right: 0;
+        -webkit-transition: 0.3s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+        transition: 0.3s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+      }
+      .button:hover::after {
+        right: 0;
+        -webkit-transition: right 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+        transition: right 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+      }
+          
