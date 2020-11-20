@@ -28,7 +28,7 @@ SECRET_KEY = '=7c!m%vr!c#4ei2!kwyu=4=k!inj_mrao!dy=r2-%%j&gvs=(r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['covid-19-track-adi.herokuapp.com','127.0.0.1']
 
 STATICFILES_DIRS = [
     "/projects/covid_19_site/static" ,
