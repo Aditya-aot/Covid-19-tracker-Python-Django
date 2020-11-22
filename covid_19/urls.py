@@ -8,5 +8,8 @@ from django.contrib.auth.models import  User
 #     # path('print', views.print, name='print'),
 # ]
 urlpatterns = [
-    path('', views.home , name='home') ,
+    path('a', views.start , name='start') ,
+    path('', views.top_country , name='top_country') ,
+    path('details', views.home , name='home') ,
+  
 ]

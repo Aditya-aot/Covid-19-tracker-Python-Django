@@ -1,9 +1,24 @@
 from django.shortcuts import render
 from .forms import CountryForm
 
+import threading
 import json
+from json import dumps
 import requests
 # Create your views here.
+url2 = "https://coronavirus-map.p.rapidapi.com/v1/summary/latest"
+
+headers = {
+        'x-rapidapi-key': "fc10ca2471msh1436e5004570dd2p152fdfjsn953b9a54ea03",
+        'x-rapidapi-host': "coronavirus-map.p.rapidapi.com"
+        }
+
+response2 = requests.request("GET", url2, headers=headers)
+all_data=(response2.json())
+
+
+
+
 def home(request) :
     user_input="india"
     form = CountryForm()
@@ -51,6 +66,33 @@ def home(request) :
     days = (quotes['response'][0]['day'])
     time = (quotes['response'][0]['time'])
 
+
+# [
+    a=all_data['data']['regions']
+    topcon=[]
+    topnum=[]  
+    n=0
+    for i in a:    
+        n=n+1
+        if n<6 :
+            querystring3 = {"country":i,}
+            
+            response3 = requests.request("GET", url, headers=headers, params=querystring3)
+            quotes3 =response3.json()
+
+            a=quotes3['response'][0]['country']
+            b=quotes3['response'][0]['cases']['total']
+
+            topcon.append(a)
+            topnum.append(b)
+    topcon2=dumps(topcon)
+    topnum2=dumps(topnum)        
+
+# ]
+
+
+
+
     context = { 'form' : form ,
                 'quotes' : quotes ,
                 'population' :population ,
@@ -73,6 +115,60 @@ def home(request) :
 
                 'days' : days ,
                 'time' : time ,
+                'topcon' : topcon2,
+                'topnum' : topnum2 ,
                    }
     return render(request, 'covid_19/home.html', context)
+
+
+
     
+def top_country(request) :    
+    form = CountryForm()
+
+    a=all_data['data']['regions']
+    topcon=[]
+    topnum=[]  
+    n=0
+
+  
+    for i in a:    
+        n=n+1
+        if n<6 :
+            url3 = "https://covid-193.p.rapidapi.com/statistics"
+            querystring3 = {"country":i,}
+            headers = {
+                    'x-rapidapi-key': "fc10ca2471msh1436e5004570dd2p152fdfjsn953b9a54ea03",
+                    'x-rapidapi-host': "covid-193.p.rapidapi.com"
+            }
+            response3 = requests.request("GET", url3, headers=headers, params=querystring3)
+            quotes3 =response3.json()
+
+            a=quotes3['response'][0]['country']
+            b=quotes3['response'][0]['cases']['total']
+
+            topcon.append(a)
+            topnum.append(b)
+    topcon2=dumps(topcon)
+    topnum2=dumps(topnum) 
+
+    context = { 'form':form ,
+                'topcon' : topcon2,
+                'topnum' : topnum2 ,
+                   }
+
+    return render(request, 'covid_19/top_country.html' , context)
+
+def start(request) :    
+
+    form = CountryForm()
+
+    a=all_data['data']['regions']
+    topcon=[]
+    topnum=[]  
+    top_country("http://127.0.0.1:8000")
+    context = { 'form':form ,
+                'topcon' : topcon,
+                'topnum' : topnum ,
+                   }
+    return render(request, 'covid_19/top_country.html' , context)    

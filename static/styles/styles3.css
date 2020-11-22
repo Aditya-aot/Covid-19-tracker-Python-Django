@@ -1,5 +1,5 @@
 .basic {
-    border: 5px solid #ff0b0b ;
+    border: 5px solid #ffcc5c ;
     display: flex ; 
     flex-direction: row ;
     justify-content: space-around ;
@@ -247,16 +247,16 @@
           font-size: 23px;
           margin: -50px 0 80px 0;
           display: block;
-          text-align: center;
-      } */
+          text-align: center; */
+      /* } */
       .box{
         position:absolute;
         left:50%;
-        top:50%;
+        top:69%;
         transform: translate(-50%,-50%);
           background-color: rgba(0, 0, 0, 0.89);
         border-radius:3px;
-        padding:70px 100px;
+        padding:20px 100px;
       }
       .input-container{
         position:relative;
@@ -285,7 +285,7 @@
        outline:none;
        border-bottom:1px solid #e74c3c;	
       }
-      .btn{
+      .btnn{
         color:#fff;
         background-color:#e74c3c;
         outline: none;

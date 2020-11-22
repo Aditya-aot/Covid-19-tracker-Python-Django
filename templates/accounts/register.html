@@ -1,0 +1,88 @@
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registeration</title>
+</head>
+
+
+{% extends 'covid_19/base.html'%}
+{% block content %}
+
+
+<div class="container nav-wrapper">
+    <hr>
+
+    <h1>Register ...</h1>
+
+<hr>
+
+         {% comment %} <form action="/accounts/register/" method="post">
+              {% csrf_token %}
+            <input type="text" name="first_name" placeholder="first_name">        <br>
+            <input type="text" name="last_name" placeholder="last_name">          <br>
+            <input type="text" name="username" placeholder="username">            <br>
+            <input type="email" name="email" placeholder="email">                 <br>
+            <input type="password" name="password1" placeholder="password">       <br>
+            <input type="password" name="password2" placeholder="confirm password"><br>
+
+            <input type="submit" class="btn btn-info">
+        </form>  {% endcomment %}
+
+
+ 
+</div>
+
+
+
+<div class="box">
+	<form action="/accounts/register/" method="post">
+     {% csrf_token %}
+		<span class="text-center">Register</span>
+	<div class="input-container">
+		 <input type="text" name="first_name" required=""/> 
+		<label>First Name</label>		
+	</div>
+	<div class="input-container">		
+		<input type="text" name="last_name" required=""/>
+		<label>Last Name</label>
+	</div>
+    <div class="input-container">		
+		<input type="text" name="username" required=""/>
+		<label>UserName</label>
+	</div>
+    <div class="input-container">		
+		<input type="email" name="email" required=""/>
+		<label>Email</label>
+	</div>
+    <div class="input-container">		
+		<input type="password" name="password1" required=""/>
+		<label>Password</label>
+	</div>
+    <div class="input-container">		
+		<input type="password" name="password2" required=""/>
+		<label>confirm password</label>
+	</div>
+    
+		<input type="submit" class="btnn">
+</form>	
+</div>
+
+      <div>
+           {% for message in messages %}
+           <div class="alert alert-danger" role="alert">
+           <h3> {{message}} </h3>
+           </div>
+           {% endfor %}
+       </div>
+
+
+
+
+{% endblock content %}

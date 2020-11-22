@@ -21,4 +21,5 @@ from covid_19 import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('covid_19.urls')),
+    path('accounts/', include('accounts.urls')),
 ]
