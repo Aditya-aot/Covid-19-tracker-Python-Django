@@ -124,7 +124,7 @@
         left: 0;
         right: 100%;
         bottom: 0;
-        background: #fafafa;
+        background: #f7f7f7;
         -webkit-transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
         transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
         z-index: -1;
@@ -132,7 +132,7 @@
       .button::after {
         content: "";
         display: inline-block;
-        background-image: url("https://p.kindpng.com/picc/s/73-736252_transparent-white-arrow-png-transparent-next-arrow-white.png");
+        background-image: url("https://image.flaticon.com/icons/png/128/109/109617.png");
         position: absolute;
         top: 0;
         left: calc(100% - 3em);
