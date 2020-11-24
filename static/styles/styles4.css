@@ -47,7 +47,9 @@
     color: blue ;
     }
 
-
+/* .button:hover {
+    color: blue ;
+    } */
 
     /* .button {
         border-radius: 4px;
@@ -258,7 +260,16 @@
       .box{
         position:absolute;
         left:50%;
-        top:69%;
+        top:75%;
+        transform: translate(-50%,-50%);
+          background-color: rgba(0, 0, 0, 0.89);
+        border-radius:3px;
+        padding:20px 100px;
+      }
+       .box2{
+        position:absolute;
+        left:50%;
+        top:53%;
         transform: translate(-50%,-50%);
           background-color: rgba(0, 0, 0, 0.89);
         border-radius:3px;
@@ -299,7 +310,7 @@
           color: #fff;
         padding:10px 20px;
         text-transform:uppercase;
-        margin-top:50px;
+        margin-top:10px;
         border-radius:2px;
         cursor:pointer;
         position:relative;
