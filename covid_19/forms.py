@@ -23,7 +23,7 @@ a= [('a','A'),('b','B'),('c','C'),('d','D'),['e','E']]
 
 class CountryForm(forms.Form):
     # country = forms.CharField(label='', widget=forms.TextInput(attrs={"placeholder": "Input Country "}),  )
-    country = forms.CharField(label='which conuntry', widget=( forms.Select(choices=location )   ) )  
+    country = forms.CharField(label='Select country ', widget=( forms.Select(choices=location )   ) )  
 
 
     # (attrs={'class': 'form-control'})
