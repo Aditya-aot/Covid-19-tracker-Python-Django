@@ -9,7 +9,7 @@ import requests
 url2 = "https://coronavirus-map.p.rapidapi.com/v1/summary/latest"
 
 headers = {
-        'x-rapidapi-key': "fc10ca2471msh1436e5004570dd2p152fdfjsn953b9a54ea03",
+        'x-rapidapi-key': "",
         'x-rapidapi-host': "coronavirus-map.p.rapidapi.com"
         }
 
@@ -32,7 +32,7 @@ def home(request) :
 
     querystring = {"country": user_input, }
     headers = {
-             'x-rapidapi-key': "fc10ca2471msh1436e5004570dd2p152fdfjsn953b9a54ea03",
+             'x-rapidapi-key': "",
             'x-rapidapi-host': "covid-193.p.rapidapi.com"
         }
     response = requests.request("GET", url, headers=headers, params=querystring)
