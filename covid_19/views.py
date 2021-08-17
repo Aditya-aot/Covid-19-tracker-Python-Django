@@ -28,6 +28,7 @@ def home(request) :
             user_input = form.cleaned_data['country']
 
 
+# 
     url = "https://covid-193.p.rapidapi.com/statistics"
 
     querystring = {"country": user_input, }
